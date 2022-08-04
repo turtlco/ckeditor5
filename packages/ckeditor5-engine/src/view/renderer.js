@@ -121,14 +121,14 @@ export default class Renderer {
 		// Rendering the selection and inline filler manipulation should be postponed in (non-Android) Blink until the user finishes
 		// creating the selection in DOM to avoid accidental selection collapsing
 		// (https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723).
-		// When the user stops selecting, all pending changes should be rendered ASAP, though.
-		if ( env.isBlink && !env.isAndroid ) {
-			this.on( 'change:isSelecting', () => {
-				if ( !this.isSelecting ) {
-					this.render();
-				}
-			} );
-		}
+		// When the user stops selecting, all pending changes should be rendered ASAP, though. - TEST
+		// if ( env.isBlink && !env.isAndroid ) {
+		// 	this.on( 'change:isSelecting', () => {
+		// 		if ( !this.isSelecting ) {
+		// 			this.render();
+		// 		}
+		// 	} );
+		// }
 
 		/**
 		 * The text node in which the inline filler was rendered.

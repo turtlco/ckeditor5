@@ -107,13 +107,13 @@ export default class Renderer extends Observable {
         // creating the selection in DOM to avoid accidental selection collapsing
         // (https://github.com/ckeditor/ckeditor5/issues/10562, https://github.com/ckeditor/ckeditor5/issues/10723).
         // When the user stops selecting, all pending changes should be rendered ASAP, though.
-        if (env.isBlink && !env.isAndroid) {
-            this.on('change:isSelecting', () => {
-                if (!this.isSelecting) {
-                    this.render();
-                }
-            });
-        }
+        // if (env.isBlink && !env.isAndroid) {
+        //     this.on('change:isSelecting', () => {
+        //         if (!this.isSelecting) {
+        //             this.render();
+        //         }
+        //     });
+        // }
         /**
          * The text node in which the inline filler was rendered.
          *
